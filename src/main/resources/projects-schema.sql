@@ -48,3 +48,38 @@ CREATE TABLE material (
   FOREIGN KEY (project_id) REFERENCES project (project_id) ON DELETE CASCADE
   );
   
+insert into category (category_name)
+values ('Doors and Windows');
+select * from project;
+
+insert into material (project_id, material_name, num_required)
+values 
+(1, '2-inch screws', 20);
+
+insert into step (project_id, step_text, step_order)
+values 
+(1, 'Screw door hangers on the top and bottom of each side of the door frame', 1);
+
+insert into project_category (project_id, category_id)
+values
+(1, 1);
+
+insert into category (category_id, category_name) values(2, 'Repairs');
+insert into category (category_id, category_name) values(3, 'Gardening');
+
+insert into material (project_id, material_name, num_required, cost) values (2, 'faucet', 30, 4.55);
+insert into material (project_id, material_name, num_required, cost) values (3, 'power point', 225, 19.99);
+
+insert into step (project_id, step_text, step_order) values (2, 'Repair all of the old parts', 2);
+insert into step (project_id, step_text, step_order) values (3, 'Clear the garbege in the garden', 3);
+
+insert into project_category (project_id, category_id)
+values
+(2, 2);
+
+insert into project_category (project_id, category_id)
+values
+(3, 3);
+
+
+  
